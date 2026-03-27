@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Seatwork 1</title>
+
+    <style>
+
+        #LOGIN{
+            color: rgb(255, 192, 203);
+            font-family: 'Arial', sans-serif;
+        }
+
+        #username, #password, #checkboxID{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(255, 192, 203);
+        }
+
+        .login-button{
+            background-color: rgb(255, 192, 203);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #logindiv{
+            background-color: rgb(255, 244, 243);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(255, 108, 108, 0.809); align-items: center;
+            width: 300px;
+            margin: 100px auto;
+            height: 300px;
+        }
+
+        #username1, #password1, label[for="checkboxID"]{
+            font-family: 'Arial', sans-serif;
+            color: rgb(255, 192, 203);
+        }
+
+
+        body{
+
+            background-image: url('https://i.pinimg.com/736x/cd/5a/b2/cd5ab20854126f36914019dd3c11fbb5.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+    <div id="logindiv">
+
+        <h1 id="LOGIN"> ⎿⭘ԌÌƝ </h1>
+
+
+         <form onsubmit="loginFunction(event)" method="post">
+            <label for="username" id="username1">Usᥱɾղαɱᥱ~!:</label>
+            <input type="text" id="username" name="username">
+            
+            <br><br>
+
+            <label for="password" id="password1">Pαѕѕωσя∂~!:</label>
+            <input type="password" id="password" name="password">
+            
+            <br><br>
+
+            <input type="checkbox" id="checkboxID">
+            <label for="checkboxID">Rҽɱҽɱвҽɾ mҽ~!</label>
+
+             <br><br>
+
+
+            <input type="submit" class="login-button" value="Login">
+
+            <br><br>
+
+            </form>
+
+
+
+
+
+    </div>
+
+
+
+
+
+<script>
+function loginFunction(event) {
+    event.preventDefault();
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let remember = document.getElementById("checkboxID").checked;
+
+    let correctPassword = "67";
+
+  
+    if (password === correctPassword) {
+
+        switch(remember) {
+            case true:
+                alert("Welcome " + username + "! We will remember you...muehehe");
+                break;
+
+            case false:
+                alert("Welcome " + username + "!");
+                break;
+        }
+
+    } else {
+        alert("Incorrect passwor! Don't try to hack! Try again!");
+    }
+}
+</script>
+    
+</body>
+</html>
